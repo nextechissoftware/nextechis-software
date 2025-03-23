@@ -38,6 +38,7 @@ body {
     align-items: center;
     color: black;
     width: 100%;
+    display: flex;
 }
 .hero-overlay {
     position: absolute;
