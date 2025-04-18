@@ -1599,13 +1599,7 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-#thank-you {
-      display: none; /* Hidden by default */
-      color: green;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: 20px;
-    }
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
