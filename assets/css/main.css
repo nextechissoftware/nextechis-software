@@ -1599,13 +1599,6 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-#thank-you {
-      display: none; /* Hidden by default */
-      color: green;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: 20px;
-    }
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
@@ -2488,4 +2481,26 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.notification {
+  position: fixed;
+  top: -17.5px;
+  right: 20px;
+  background-color: var(--accent-color);
+  color: white;
+  width: 400px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }

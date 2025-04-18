@@ -206,14 +206,20 @@
  /**
    * contact form
    */
+ function showNotification() {
+  const notification = document.getElementById("thank-you");
+  notification.classList.remove("hidden");
+  // Auto-hide after 4 seconds
+  setTimeout(() => {
+    notification.classList.add("hidden");
+  }, 4000);
+}
 const form = document.getElementById('contact-form');
     const thankYou = document.getElementById('thank-you');
-
+    loader = document.querySelector(".loading");
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
       const formData = new FormData(form);
-
       fetch(form.action, {
         method: "POST",
         body: formData,
@@ -223,7 +229,8 @@ const form = document.getElementById('contact-form');
       }).then(response => {
         if (response.ok) {
           form.reset();
-          thankYou.style.display = 'block';
+          loader.classList.remove('d-block')
+          showNotification();
         } else {
           alert("Something went wrong. Please try again.");
         }

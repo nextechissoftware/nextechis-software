@@ -571,7 +571,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form  action="https://formsubmit.co/nextechissoftware@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form  action="https://formsubmit.co/nextechissoftware@gmail.com" method="POST" id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <input type="hidden" name="_redirect" value="javascript:void(0);">
               <div class="row gy-4">
 
@@ -590,18 +590,16 @@
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
-
+                <div class="loading">Sending</div>    
+                <div id="thank-you" class="notification hidden">
+                Thank you! Your message has been successfully sent.
+                </div>
                 <div class="col-md-12 text-center">
-                  
-                  
-                  
-
                   <button type="submit">Send Message</button>
                 </div>
 
               </div>
             </form>
-            <div id="thank-you">✅ Thank you! Your message has been successfully sent.</div>
           </div><!-- End Contact Form -->
 
         </div>
