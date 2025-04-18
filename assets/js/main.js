@@ -216,8 +216,10 @@
 }
 const form = document.getElementById('contact-form');
     const thankYou = document.getElementById('thank-you');
-    loader = document.querySelector(".loading");
+    loader = document.querySelector("#loading");
+    console.log("++++++++++++++++++++++++++++++++++++++++++", loader)
     form.addEventListener('submit', function(e) {
+      loader.classList.remove('hidden-spinner')
       e.preventDefault();
       const formData = new FormData(form);
       fetch(form.action, {
@@ -229,7 +231,8 @@ const form = document.getElementById('contact-form');
       }).then(response => {
         if (response.ok) {
           form.reset();
-          loader.classList.remove('d-block')
+          loader.classList.add('hidden-spinner')
+          console.log("+++++++++++++++++++++++++++++++++++++++++++", loader)
           showNotification();
         } else {
           alert("Something went wrong. Please try again.");
