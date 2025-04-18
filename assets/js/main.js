@@ -203,31 +203,4 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
- /**
-   * contact form
-   */
-const form = document.getElementById('contact-form');
-    const thankYou = document.getElementById('thank-you');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          thankYou.style.display = 'block';
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      }).catch(error => {
-        alert("Error: " + error.message);
-      });
-    });
+ 
